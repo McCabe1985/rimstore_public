@@ -1,0 +1,26 @@
+@use "../utils/" as *;
+
+.success-messsage-container {
+  @include flexContainer(column);
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+  @include rimCard;
+  .success-message {
+    color: white;
+    font-size: 3rem;
+    font-family: RimWordFont;
+    text-align: center;
+  }
+  .success-page-link {
+    color: white;
+    font-size: 2.5rem;
+    font-family: RimWordFont;
+    margin: 3rem 0;
+    text-align: center;
+    padding: 0.5rem;
+    &:hover {
+      border-bottom: 5px solid white;
+    }
+  }
+}

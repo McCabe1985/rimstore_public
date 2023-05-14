@@ -1,0 +1,20 @@
+@use "../utils/" as *;
+
+.mobile-nav-container {
+  width: 100%;
+  min-height: 0.1rem;
+  position: relative;
+  .mobile-navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    @include headingFont(white, 1.5rem, 900);
+    @include rimCard;
+    border-left: none;
+    line-height: 2;
+    padding: 1rem;
+    animation: hamburgerEntrance 1s ease 0s 1 normal forwards;
+    z-index: 10;
+  }
+}

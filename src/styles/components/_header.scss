@@ -1,0 +1,21 @@
+@use "../utils/" as *;
+
+.hero-container {
+  position: relative;
+  height: 85vh;
+  width: 100%;
+  overflow: hidden;
+  @include flexContainer(column);
+  justify-content: space-between;
+  @include lg {
+    @include flexContainer(row);
+  }
+
+  .hero-img {
+    display: none;
+    height: 100%;
+    @include xl {
+      display: block;
+    }
+  }
+}

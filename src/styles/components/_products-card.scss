@@ -1,0 +1,107 @@
+@use "../utils/" as *;
+
+.product-card-container {
+  @include flexContainer(row);
+  align-items: center;
+  justify-content: space-between;
+  width: 95%;
+  min-height: 1rem;
+  color: white;
+  font-size: 1.2rem;
+  &:nth-child(odd) {
+    background: #36383b;
+  }
+  .product-card-item-details {
+    @include flexContainer(row);
+    justify-content: flex-start;
+    align-items: center;
+    width: 50%;
+    .product-card-name {
+      display: none;
+      @include breakpoint(600px) {
+        display: block;
+        margin-left: 2rem;
+      }
+      @include breakpoint(800px) {
+        font-size: 1.5rem;
+      }
+      @include breakpoint(1201px) {
+        display: none;
+      }
+      @include breakpoint(1400px) {
+        font-size: 1rem;
+        display: block;
+      }
+      @include breakpoint(1500px) {
+        font-size: 1.5rem;
+        display: block;
+      }
+    }
+
+    .product-card-info-button {
+      height: 2.5rem;
+      width: auto;
+      margin-left: 1rem;
+      cursor: pointer;
+    }
+    .product-card-img {
+      height: auto;
+      width: 4rem;
+    }
+  }
+  .product-card-item-count {
+    @include flexContainer(row);
+    align-items: center;
+    overflow: hidden;
+    .product-card-price {
+      @include lg {
+        margin-right: 2rem;
+      }
+    }
+    .product-card-btn {
+      width: 1.3rem;
+      height: 1.3rem;
+      background-color: #6a512e;
+      text-align: center;
+      font-weight: 900;
+      border: 2px outset #6a512e;
+
+      @include lg {
+        width: 2.2rem;
+        height: 2.5rem;
+        padding: 0.2rem;
+        margin-right: 0.5rem;
+        padding: 0.2rem;
+        border: 4px outset #6a512e;
+      }
+
+      &:hover,
+      &:focus {
+        background-color: #957549;
+        border: 4px outset #957549;
+      }
+      &:active {
+        padding: 0.1rem;
+      }
+    }
+  }
+}
+
+.product-card-description {
+  display: none;
+}
+
+.toggle-description {
+  display: block;
+  position: fixed;
+
+  text-align: center;
+  z-index: 30;
+  background-color: #111;
+  border: 1px solid white;
+  @include lg {
+    left: 15rem;
+    top: 50%;
+    width: 30rem;
+  }
+}

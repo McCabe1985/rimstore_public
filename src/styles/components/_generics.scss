@@ -1,0 +1,11 @@
+@use "../utils/" as *;
+
+body {
+  background-color: #10171f;
+  background-image: url("../images/rimstorebg.webp");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: right top;
+  background-size: cover;
+  line-height: 1.5;
+}

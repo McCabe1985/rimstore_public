@@ -1,0 +1,12 @@
+@use "../utils/" as *;
+
+.not-found-container {
+  @include flexContainer(column);
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+  @include rimCard;
+  color: white;
+  font-size: 4rem;
+  font-family: RimWordFont;
+}

@@ -1,0 +1,18 @@
+@use "../utils/" as *;
+
+.store-interface-filter-controls {
+  background-color: #6a512e;
+  text-align: center;
+  font-weight: 900;
+  border: 5px outset #6a512e;
+
+  appearance: none;
+  @include lg {
+    font-size: 1.5rem;
+    padding: 0.7em 1.2em;
+  }
+  .store-interface-controls-option {
+    @include rimCard;
+    margin-top: 1rem;
+  }
+}

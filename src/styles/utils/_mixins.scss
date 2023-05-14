@@ -1,0 +1,98 @@
+@use "./variables" as *;
+//flex containers
+@mixin flexContainer($direction) {
+  display: flex;
+  align-items: center;
+  flex-direction: $direction;
+  overflow-x: hidden;
+}
+
+/*
+fonts
+*/
+@mixin headingFont($color, $size, $weight) {
+  color: $color;
+  font-family: "RimWordFont", Georgia, serif;
+  font-size: $size;
+  font-weight: $weight;
+  text-transform: uppercase;
+  text-shadow: 0px 0px 10px #000000;
+}
+
+@mixin primaryFont($color, $size, $weight) {
+  color: $color;
+  font-family: "RobotoFlex-VariableFont", Tahoma, sans-serif;
+  font-size: $size;
+  font-weight: $weight;
+  text-align: left;
+}
+
+@mixin subHeading($color, $size, $weight) {
+  @include heroFont($color, $size, $weight);
+}
+
+/*
+buttons
+*/
+@mixin primaryButton($color, $size, $weight) {
+  @include primaryFont($color, $size, $weight);
+  padding: 0.5em 1em;
+  background-color: $accent-clr;
+  border-radius: 1rem;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #59aee280;
+    padding: 0.5em 1.5em;
+    transform: translateX(-410px);
+    transition: all ease-in-out 1.5s;
+  }
+  &:hover,
+  &:focus {
+    animation: shadowPulse linear 3s infinite 0s forwards;
+    &::before {
+      width: 100%;
+      height: 100%;
+      animation: btnSlideRight linear 0.5s 0s forwards;
+    }
+  }
+}
+
+/*
+Links
+*/
+@mixin primaryLink($color, $size, $weight) {
+  @include primaryFont($color, $size, $weight);
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/*
+Parallax Background
+*/
+
+@mixin parallaxBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*
+Rimstore card style
+*/
+@mixin rimCard {
+  background-color: #262626;
+  border: 1px solid white;
+}

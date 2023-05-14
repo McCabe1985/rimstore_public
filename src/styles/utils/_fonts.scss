@@ -1,0 +1,21 @@
+@font-face {
+  font-family: "RobotoFlex-VariableFont";
+  font-weight: 100 200 300 400 500 600 700 800 900 1000;
+  src: local("RobotoFlex-VariableFont"),
+    url("./fonts/RobotoFlex-VariableFont.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "RobotoSlab-VariableFont";
+  font-weight: 100 200 300 400 500 600 700 800 900 1000;
+  src: local("RobotoSlab-VariableFont"),
+    url("./fonts/RobotoSlab-VariableFont.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "RimWordFont";
+  src: local("RimWordFont"), url("./fonts/RimWordFont.ttf") format("truetype");
+  font-display: swap;
+}

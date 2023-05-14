@@ -1,0 +1,91 @@
+@use "../utils/" as *;
+
+@use "../utils/" as *;
+
+.products-container {
+  @include rimCard;
+  width: 99%;
+  height: 90%;
+  margin: 1rem;
+  @include flexContainer(column);
+  @include breakpoint(1201px) {
+    width: 50%;
+    margin: 2rem;
+    align-items: flex-start;
+  }
+  .store-interface-container {
+    @include flexContainer(row);
+    width: 90%;
+    height: 8rem;
+    align-items: center;
+    justify-content: space-between;
+  }
+  ::-webkit-scrollbar {
+    display: none;
+    width: 15px;
+    @include lg {
+      display: block;
+    }
+  }
+  ::-webkit-scrollbar-track {
+    background: #0e1113;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #222;
+    border-radius: 10px;
+    border: 4px outset #444;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  .products-heading {
+    @include headingFont(white, 1.1rem, 700);
+    margin: 1rem;
+  }
+
+  .shopping-cart-container {
+    @include flexContainer(column);
+    align-items: center;
+    width: 100%;
+    height: 85%;
+    color: white;
+    .cart-text {
+      align-self: flex-start;
+      margin: 0.2rem;
+    }
+  }
+}
+
+.cart-button-container {
+  @include flexContainer(row);
+  justify-content: center;
+  width: 100%;
+  height: 6rem;
+  padding: 0 20%;
+  .cart-button {
+    margin-top: 1rem;
+    width: 30%;
+    padding: 0.7em 1.5em;
+    background-color: #6a512e;
+    text-align: center;
+    font-weight: 900;
+    border: 5px outset #6a512e;
+    color: white;
+    &:hover,
+    &:focus {
+      background-color: #957549;
+      border: 4px outset #957549;
+    }
+    &:active {
+      padding: 0.5em 1.2em;
+    }
+  }
+}
+
+.products-section {
+  width: 90%;
+  height: 85%;
+  margin: 0 auto;
+  overflow-y: scroll;
+  border-top: 1px solid white;
+}

@@ -1,0 +1,29 @@
+@use "../utils/" as *;
+
+.nav-container {
+  @include flexContainer(row);
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 15vh;
+  .nav-link {
+    display: none;
+  }
+
+  .logo-container {
+    padding: 1rem;
+    @include headingFont(white, 2rem, 900);
+    width: 100%;
+    text-align: center;
+    @include breakpoint(250px) {
+      font-size: 2.5rem;
+    }
+    @include sm {
+      font-size: 4rem;
+    }
+  }
+
+  .hamburger-button {
+    display: none;
+  }
+}
